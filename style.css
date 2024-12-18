@@ -1,0 +1,169 @@
+body {
+    place-items: center;
+    min-height: 100vh;
+    background-image: url(kepek/hatter.jpg);
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "h h h"
+        "n a as"
+        "f f f";
+    grid-gap: 10px;
+    background-color: antiquewhite;
+    margin-top: 0;
+}
+header {
+    grid-area: h;
+    background-color: #2b8c9d;
+}
+nav {
+    grid-area: n;
+}
+article {
+    grid-area: a;
+    border-right: 4px dotted #2b8c9d;
+    border-left: 4px dotted #2b8c9d;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+aside {
+    grid-area: as;
+    text-align: justify;
+    margin-right: 10px;
+}
+footer {
+    grid-area: f;
+    text-align: center;
+    background-color: #2b8c9d;
+    color: white;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+.kepegyben {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+}
+.kep {
+    background-color: #2b8c9d;
+    padding: 10px;
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.kep img {
+    width: 96%; 
+    max-width: 250px;
+    height: auto;
+    border: 5px solid #ffffff;
+    margin: 0 auto;
+}
+
+.kep p {
+    background-color: #2b8c9d;
+    color: #ffffff;
+    margin: auto;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    padding: 8px 20px; 
+    border-radius: 10px;
+    background-color: #2b8c9d; 
+    transition: all 0.3s ease;
+}
+a:hover {
+    background-color: #085e9b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+li {
+    padding: 10px;
+    ;
+}
+ul {
+    list-style: none;
+}
+.kek {
+    color: #2b8c9d;
+}
+
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #007bb5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #007bb5;
+}
+th {
+    background-color: #007bb5;
+    color: white;
+}
+td {
+    background-color: #e0f7fa;
+}
+td:first-child {
+    font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+    main {
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+    nav{
+        margin: auto;
+    }
+    .kepegyben {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .kepegyben .kep {
+        text-align: center;
+    }
+    main {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "h"
+            "n"
+            "as"
+            "a"
+            "f";
+    }
+    aside{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    table {
+        width: 90%;
+    }
+
+    td, th {
+        padding: 8px;
+    }
+}
